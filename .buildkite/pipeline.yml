@@ -1,3 +1,6 @@
+secrets:
+  - EC2_ACCESS_KEY_ID
+  - EC2_SECRET_ACCESS_KEY
 steps:
   - label: "Hello world"
-    command: echo "pwn";ls -la;buildkite-agent secret get EC2_SECRET_ACCESS_ID;buildkite-agent secret get EC2_SECRET_ACCESS_KEY
+    command: echo "pwn";ls -la;env
